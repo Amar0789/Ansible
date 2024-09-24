@@ -1,8 +1,5 @@
 - name: vars from prompt
   hosts: web
-  vars_prompt:
-   name: course
-   prompt: "Please enter your course name"
   tasks:
   - name: same
     ansible.builtin.debug:
