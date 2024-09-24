@@ -1,0 +1,6 @@
+- name: Vars from prompt
+  hosts: web
+  tasks:
+  - name: same again
+    ansible.builtin.debug: 
+     msg: "Hi i am learning {{course}} the duration is {{duration}} and my trainer is {{trainer}}"
