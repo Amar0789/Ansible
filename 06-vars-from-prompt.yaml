@@ -4,7 +4,7 @@
   - name: course
     prompt: Please enter your course name
     private: false
-  - name: duartion
+  - name: duration
     prompt: Please enter your course duartion
     private: false
   - name: trainer
