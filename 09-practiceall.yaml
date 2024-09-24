@@ -1,6 +1,6 @@
-- name: Same
+- name: ss
   hosts: web
   tasks:
-  - name: same again
+  - name: same
     ansible.builtin.debug:
      msg: "{{course}}"
