@@ -1,13 +1,9 @@
-- name: To take input from prompt
+- name: Vars from files
   hosts: web
-  vars-prompt:
+  vars_prompt:
   - name: course
-    prompt: please enter your course name
-  - name: duration
-    prompt: please enter your course duration
-  - name: trainer
-    prompt: please enter your trainer name
+    prompt: "Please enter your course name"
   tasks:
-  - name: same again
+  - name: Vars from files
     ansible.builtin.debug:
      msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
