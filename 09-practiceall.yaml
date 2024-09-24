@@ -3,10 +3,10 @@
   become: yes
   tasks:
   - name: same again
-    ansible.builtin.pacakge:
+    ansible.builtin.package:
      name: nginx
      state: present
-     
+
 - name: nginx start
   hosts: web
   become: yes
