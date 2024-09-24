@@ -1,9 +1,9 @@
-- name: Vars from files
+- name: vars from prompt
   hosts: web
-  vars_files:
-   vars.yaml
+  vars_prompt:
+   name: course
+   prompt: "Please enter your course name"
   tasks:
   - name: same
     ansible.builtin.debug:
      msg: "{{course}}"
-     
