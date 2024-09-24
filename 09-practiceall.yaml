@@ -1,0 +1,5 @@
+- name: Practice all
+  hosts: web
+  tasks:
+  - name: Nothing
+    ansible.builtin.ping:
