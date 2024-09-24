@@ -3,5 +3,5 @@
   tasks:
   - name: same
     ansible.builtin.package:
-    - name: nginx
-      state: absent
+     name: nginx
+     state: absent
