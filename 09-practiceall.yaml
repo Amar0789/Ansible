@@ -1,18 +1,8 @@
-- name: nginx installation
+- name: vars
   hosts: web
-  become: yes
+  vars:
+   course: "Devops"
   tasks:
-  - name: same again
-    ansible.builtin.package:
-     name: nginx
-     state: present
-
-- name: nginx start
-  hosts: web
-  become: yes
-  tasks:
-  - name: same again 2
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
+  - name: same
+    ansible.builtin.debug:
+     msg: "Hi, i am learning {{coures}}"
