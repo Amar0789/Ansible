@@ -1,13 +1,16 @@
-- name: Vars from files
+- name: Vars from prompt
   hosts: web
   vars_prompt:
   - name: course
-    prompt: "Please enter your course name"
-  - name: duration
-    prompt: "Please enter your course duratiom"
+    prompt: Please enter your course name
+    private: false
+  - name: duartion
+    prompt: Please enter your course duartion
+    private: false
   - name: trainer
-    prompt: "Please enter your trainer name"
+    prompt: Please enter your trainer name
+    private: false
   tasks:
-  - name: Vars from files
-    ansible.builtin.debug:
-     msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
+  - name: same again
+    ansible.builtin.debug: 
+     msg: "Hi i am learning {{course}} the duration is {{duration}} and my trainer is {{trainer}}"
