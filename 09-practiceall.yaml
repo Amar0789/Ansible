@@ -1,7 +1,7 @@
-- name: Nothin2
+- name: Nginx remove
   hosts: web
   tasks:
-  - name: nothing2
-    ansible.builtin.debug:
-     msg: "Hi again"
-     
+  - name: same
+    ansible.builtin.package:
+    - name: nginx
+      state: absent
