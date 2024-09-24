@@ -1,8 +1,9 @@
-- name: vars
+- name: Vars from files
   hosts: web
-  vars:
-   course: "Devops"
+  vars_files:
+   vars.yaml
   tasks:
   - name: same
     ansible.builtin.debug:
-     msg: "Hi, i am learning {{course}}"
+     msg: "{{course}}"
+     
