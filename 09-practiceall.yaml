@@ -1,6 +1,6 @@
-- name: vars from prompt
+- name: Same
   hosts: web
   tasks:
-  - name: same
+  - name: same again
     ansible.builtin.debug:
      msg: "{{course}}"
