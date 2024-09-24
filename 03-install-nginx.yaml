@@ -4,8 +4,8 @@
   tasks: 
   - name: To install nginx
     ansible.builtin.package:
-    name: nginx
-    state: present
+     name: nginx
+     state: present
 
 - name: To start and enable nginx
   hosts: web
@@ -13,6 +13,6 @@
   tasks: 
   - name: To start nginx
     ansible.builtin.service:
-    name: nginx
-    state: started
-    enabled: yes
+     name: nginx
+     state: started
+     enabled: yes
