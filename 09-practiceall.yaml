@@ -1,5 +1,7 @@
-- name: Practice all
+- name: Nothin2
   hosts: web
   tasks:
-  - name: Nothing
-    ansible.builtin.ping:
+  - name: nothing2
+    ansible.builtin.debug:
+     msg: "Hi again"
+     
