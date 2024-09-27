@@ -1,8 +1,8 @@
-- name: orking with filters
+- name: conversion
   hosts: web
-  vars:
-   names: "Hello"
+  vars: 
+   fry: "AlooS"
   tasks:
-  - name: output 'Hello World' filtered to lower case
-    ansible.builtin.debug: 
-      msg: "{{ names | lower }}"
+  - name: conversuuo
+     ansible.builtin.module:
+      msg: "{{fry | lower}}"
