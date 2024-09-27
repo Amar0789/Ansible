@@ -3,6 +3,10 @@
   vars: 
    fry: "AlooS"
   tasks:
-  - name: output 'Hello World' filtered to lower case
-    ansible.builtin.debug: 
-      msg: "{{ 'fry' | lower }}"
+  - name: conversuuo
+    ansible.builtin.debug:
+      msg: "{{ fry | lower}}"
+
+
+
+      
