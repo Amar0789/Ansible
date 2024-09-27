@@ -1,4 +1,4 @@
--name: Learning all data types
+- name: Learning all data types
  hosts: local
  become: local
  vars:
