@@ -1,6 +1,6 @@
-- name: orking ith conditions
+- name: To work ith conditions
   hosts: local
-  become: yes
+  become: true
   vars_prompt:
    - name: number
      prompt: Please enter a number
@@ -15,5 +15,3 @@
     ansible.builtin.debug:
      msg: "The number you have entered is greater than or equal to 10"
     when: number | int >= 10
-
-  
