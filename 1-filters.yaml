@@ -1,0 +1,8 @@
+- name: orking with filters
+  hosts: web
+  vars:
+   greeting: "Good Morning"
+  tasks:
+  - name: To convert every greeting into small letters
+     ansible.builtin.module:
+      msg: "{{ greetings | lower }}"
