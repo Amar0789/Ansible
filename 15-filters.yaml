@@ -3,4 +3,4 @@
   tasks:
   - name: output 'Hello World' filtered to lower case
     ansible.builtin.debug: 
-      msg: "{{ 'Hello World' | lower }}""
+      msg: "{{ 'Hello World' | lower }}"
