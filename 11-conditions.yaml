@@ -1,0 +1,19 @@
+- name: orking ith conditions
+  hosts: local
+  become: yes
+  vars_prompt:
+   - name: number
+     prompt: Please enter a number
+     private: false
+  tasks:
+  - name: To print a number less than 10
+    ansible.builtin.debug:
+     msg: "The number you have entered is less than 10"
+    when: number | int < 10
+
+  - name: To print a number greater than or equal to 10
+    ansible.builtin.debug:
+     msg: "The number you have entered is less than 10"
+    when: number | int >= 10
+
+  
