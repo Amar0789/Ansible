@@ -5,4 +5,4 @@
   tasks:
   - name: conversuuo
     ansible.builtin.module:
-      msg: "{{ 'fry' | lower}}"
+      msg: "{{ fry | lower}}"
