@@ -4,7 +4,7 @@
   tasks:
   - name: To install pacakges
     ansible.builtin.pacakge:
-     name: {{item}}
+     name: "{{item}}"
      state: present
     loop:
     - nginx
