@@ -1,8 +1,8 @@
 - name: orking with filters
   hosts: web
   vars:
-   greeting: "Good Morning"
+   numbers: [1,5,9,3,7,2,6,1,5,2]
   tasks:
   - name: To convert every greeting into small letters
      ansible.builtin.debug:
-      msg: "{{ "greeting" | upper }}"
+      msg: "{{ numbers | unique }}"
