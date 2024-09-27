@@ -1,6 +1,8 @@
 - name: orking with filters
   hosts: web
+  vars:
+   name: "Hello"
   tasks:
   - name: output 'Hello World' filtered to lower case
     ansible.builtin.debug: 
-      msg: "{{ 'Hello World' | lower }}"
+      msg: "{{ Hello | lower }}"
