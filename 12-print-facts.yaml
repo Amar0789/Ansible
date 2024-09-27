@@ -1,0 +1,7 @@
+- name: Gathereing Facts
+  hosts: web
+  become: yes
+  tasks:
+  - name: To print all the facts of node
+    ansible.builtin.debug:
+     msg: "The facts are {{ansible_facts}}"
