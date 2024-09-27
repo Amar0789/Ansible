@@ -9,14 +9,14 @@
   - Shell scripting
   - Ansible
   - Terraform
- live: true
- tools:
-  ci: Jenkins
-  Cm: Ansible
-  cloud: AWS
-  AWS:
-  - Iam 
-  - S3
+  live: true
+  tools:
+   ci: Jenkins
+   Cm: Ansible
+   cloud: AWS
+   AWS:
+   - Iam 
+   - S3
  tasks:
  - name: To print all the data types
    ansible.builtin.debug:
