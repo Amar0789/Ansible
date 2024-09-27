@@ -1,10 +1,10 @@
 - name: default values
   hosts: web
   become: yes
-  vars_prompt:
-   name: course
-   prompt: Please enter your course name
-   private: false
+  # vars_prompt:
+  #  name: course
+  #  prompt: Please enter your course name
+  #  private: false
   
   tasks:
   - name: To set a default value
