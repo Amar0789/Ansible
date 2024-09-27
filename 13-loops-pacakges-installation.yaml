@@ -1,0 +1,13 @@
+- name: To install multiple packages using loops
+  hosts: web
+  become: yes
+  tasks:
+  - name: To install pacakges
+    ansible.builtin.pacakge:
+     name: {{item}}
+     state: present
+    loop:
+    - nginx
+    - Mysql
+    - tree
+    - ansible  
