@@ -5,4 +5,4 @@
   tasks:
   - name: To convert every greeting into small letters
      ansible.builtin.debug:
-      msg: "{{ greeting | lower }}"
+      msg: "{{ greeting | upper }}"
