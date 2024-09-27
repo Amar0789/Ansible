@@ -4,5 +4,5 @@
    numbers: [1,5,9,3,7,2,6,1,5,2]
   tasks:
   - name: To convert every greeting into small letters
-     ansible.builtin.debug:
+     ansible.builtin.set_fact:
       msg: "{{ numbers|unique }}"
