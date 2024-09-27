@@ -9,7 +9,7 @@
   tasks:
   - name: To set a default value
     ansible.builtin.debug:
-     msg: "The course you have selected is {{course | default('Ansible')}}"
-     
+     msg: "The course you have selected is {{course | default ('Ansible') }}"
+      
 
    
