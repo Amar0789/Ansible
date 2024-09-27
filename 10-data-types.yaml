@@ -1,0 +1,23 @@
+-name: Learning all data types
+ hosts: local
+ become: local
+ vars:
+  course: "AWS + DEVOPS"
+  duration: 120
+  topics:
+  - linux
+  - Shell scripting
+  - Ansible
+  - Terraform
+ live: true
+ tools:
+  ci: Jenkins
+  Cm: Ansible
+  cloud: AWS
+  AWS:
+  - Iam 
+  - S3
+ tasks:
+ - name: To print all the data types
+   ansible.builtin.debug:
+    msg: "Hi, I am learning {{course}}, duration is {{duration}}, topics are {{topics}}, and live:{{live}}, tools used are {{tools}}" 
