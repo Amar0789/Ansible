@@ -1,0 +1,45 @@
+- name: to create ec2's and hosted zones
+  hosts: local
+  connection: local
+  vars:
+   sg_id: "sgr-0af4bd14dcf6e57b4"
+   Ami_id: "ami-09c813fb71547fc4f"
+   subnet_id: "subnet-05ecfc2d741753c8e"
+   zone: app789.site
+   instances:
+   - mysql
+   - backend
+   - frontend
+  tasks:
+  - name: Ansible to install boto3 and botcore
+    ansible.builtin.pip:
+     name:
+     - boto3
+     - botocore
+     executable: pip-3.7
+
+  - name: create ec2 instances
+    amazon.aws.ec2_instance:
+     name: "{{ item }}"
+     security_group: "{{ sg_id }}"
+     instance_type: "t3.micro"
+     vpc_subnet_id: "{{ subnet_id }}"
+     image_id: "{{ Ami_id }}"
+    loop: "{{ instances }}"
+    register: ec2_instances
+
+  - name: print the output
+    ansible.builtin.debug:
+     msg: "{{ ec2_instances }}"
+
+  # - name: create r53 private records
+  #   amazon.aws.route53:
+  #    state: present
+  #    zone: "{{ zone }}" 
+  #    record: "{{ item.item }}.{{ zone }}"
+  #    type: A
+  #    ttl: 1
+  #    value: "{{ item.instances[0].private_ip_address }}"
+  #    wait: true
+  #    overwrite: true
+
