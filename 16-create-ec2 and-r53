@@ -10,6 +10,7 @@
    - mysql
    - backend
    - frontend
+   
   tasks:
   - name: Ansible to install boto3 and botcore
     ansible.builtin.pip:
