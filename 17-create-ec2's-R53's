@@ -22,9 +22,9 @@
   - name: To create Ec2 instances
     amazon.aws.ec2_instance:
      name: "{{ item }}"
-     vpc_subnet_id: "{{ subnet_id }}"
      security_group: "{{ securitygp_id }}"
-     image_id: "{{Ami_id}}"
      instance_type: "t3.micro"
+     vpc_subnet_id: "{{ subnet_id }}"
+     image_id: "{{Ami_id}}"
     loop: "{{ instances }}"
     register: ec2_instances
