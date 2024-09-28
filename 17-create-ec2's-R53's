@@ -15,8 +15,8 @@
   - name: To install boto3 and botocore
     ansible.builtin.pip:
      name:
-     -boto3
-     -botocore
+     - boto3
+     - botocore
      executable: pip-3.9
 
   - name: To create Ec2 instances:
