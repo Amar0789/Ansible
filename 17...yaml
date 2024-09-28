@@ -3,8 +3,8 @@
   connection: local
   vars:
    sg_id: "sg-083d3a3c37d3ca1bc"
-   subnet_id: " subnet-05ecfc2d741753c8e "
-   Ami_id: " ami-09c813fb71547fc4f "
+   subnet_id: "subnet-05ecfc2d741753c8e"
+   Ami_id: "ami-09c813fb71547fc4f"
    instances:
    - mysql
    - backend
