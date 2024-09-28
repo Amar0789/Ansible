@@ -19,22 +19,22 @@
      - botocore
      executable: pip-3.9
 
-  # - name: To create Ec2 instances
-  #   amazon.aws.ec2_instance:
-  #    name: "{{ item }}"
-  #    security_group: "{{ sg_id }}"
-  #    instance_type: "t3.micro"
-  #    vpc_subnet_id: "{{ subnet_id }}"
-  #    image_id: "{{Ami_id}}"
-  #   loop: "{{ instances }}"
-  #   register: ec2_instances
-
-  - name: create ec2 instances
+  - name: To create Ec2 instances
     amazon.aws.ec2_instance:
      name: "{{ item }}"
      security_group: "{{ sg_id }}"
      instance_type: "t3.micro"
      vpc_subnet_id: "{{ subnet_id }}"
-     image_id: "{{ Ami_id }}"
-    loop: " {{ instances }} "
+     image_id: "{{Ami_id}}"
+    loop: "{{ instances }}"
     register: ec2_instances
+
+  # - name: create ec2 instances
+  #   amazon.aws.ec2_instance:
+  #    name: "{{ item }}"
+  #    security_group: "{{ sg_id }}"
+  #    instance_type: "t3.micro"
+  #    vpc_subnet_id: "{{ subnet_id }}"
+  #    image_id: "{{ Ami_id }}"
+  #   loop: " {{ instances }} "
+  #   register: ec2_instances
