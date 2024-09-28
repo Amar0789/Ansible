@@ -28,3 +28,28 @@
      image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
     register: ec2_instances
+
+  - name: To create private R53 records
+    amazon.aws.route53:
+     state: present
+     record: "{{ item.item}}.{{zone}}"
+     zone: "{{ zone }}"
+     type: A
+     ttl: 1
+     value: "{{ item.instances[0].private_ip_address }}"
+     wait: true
+     overwrite: true
+    loop: "{{ ec2_instances.result }}"
+
+  - name: To create public R53 records for frontend
+    amazon.aws.route53:
+    state: present
+    record: "{{ zone}}"
+    zone: "{{ zone }}"
+    type: A
+    ttl: 1
+    value: "{{ item.instances[0].public_ip_address }}"
+    wait: true
+    overwrite: true
+    loop: "{{ ec2_instances.result }}"
+    when: item.item == "frontend"
