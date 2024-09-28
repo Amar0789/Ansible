@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   securitygp_id: " sg-083d3a3c37d3ca1bc "
+   sg_id: " sg-083d3a3c37d3ca1bc "
    subnet_id: " subnet-05ecfc2d741753c8e "
    Ami_id: " ami-09c813fb71547fc4f "
    instances:
@@ -22,7 +22,7 @@
   - name: To create Ec2 instances
     amazon.aws.ec2_instance:
      name: "{{ item }}"
-     security_group: "{{ securitygp_id }}"
+     security_group: "{{ sg_id }}"
      instance_type: "t3.micro"
      vpc_subnet_id: "{{ subnet_id }}"
      image_id: "{{Ami_id}}"
