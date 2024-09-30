@@ -3,6 +3,6 @@
   vars:
   - names: "    Amar   "
   tasks:
-   name: To dispaly my name
+  - name: To dispaly my name
    ansible.builtin.debug:
     msg: My name is "{{ names }}"
