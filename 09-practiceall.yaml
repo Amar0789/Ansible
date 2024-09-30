@@ -5,4 +5,4 @@
   tasks:
   - name: To dislpay the course i am learning
     ansible.builtin.debug:
-     msg: I am learning "{{course}}"
+     msg: "I am learning {{course}}"
