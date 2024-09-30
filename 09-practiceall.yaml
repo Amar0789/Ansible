@@ -1,4 +1,5 @@
 - name: To practice everything again
+  hosts: web
   vars:
   - names: "    Amar   "
   tasks:
