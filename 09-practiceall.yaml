@@ -1,8 +1,8 @@
-- name: To practice everything again
+- name: To work on vars
   hosts: web
-  vars:
-  - names: "Amar"
+  vars_files:
+   vars.yaml
   tasks:
-  - name: To dispaly my name
+  - name: To dislpay the course i am learning
     ansible.builtin.debug:
-     msg: "My name is {{ names }}"
+     msg: I am learning {{course}}
