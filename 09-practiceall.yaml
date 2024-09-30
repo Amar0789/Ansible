@@ -5,4 +5,4 @@
   tasks:
   - name: To dispaly my name
     ansible.builtin.debug:
-     msg: " My name is {{ names }}"
+     msg: My name is {{ names }}
