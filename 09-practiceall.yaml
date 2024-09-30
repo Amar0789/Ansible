@@ -1,6 +1,7 @@
-- name: ss
-  hosts: web
+- name: To practice everything again
+  vars:
+  - names: "    Amar   "
   tasks:
-  - name: same
-    ansible.builtin.debug:
-     msg: "{{course}}"
+   name: To dispaly my name
+   ansible.builtin.debug:
+    msg: My name is "{{ names }}"
