@@ -1,7 +1,7 @@
 - name: To practice everything again
   hosts: web
   vars:
-  - names: Amar
+  - names: "Amar"
   tasks:
   - name: To dispaly my name
     ansible.builtin.debug:
