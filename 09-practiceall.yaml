@@ -1,8 +1,7 @@
 - name: To install nginx
   hosts: web
-  vars:
-   course: "devops"
-   duration: "120 hrs"
+  vars_files:
+  - vars.yaml
   become: yes
   tasks:
   - name: To install nginx
@@ -12,7 +11,7 @@
 
   - name: To start nginx
     ansible.builtin.debug:
-     msg: "And its duration is {{duration}}"
+     msg: "And its duration is {{course}}"
 
 # - name: Learning aabout variables
 #   hosts: web
