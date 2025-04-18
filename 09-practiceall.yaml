@@ -1,8 +1,5 @@
-- name: To work on vars
-  hosts: web
-  vars_files:
-   vars.yaml
+- name: ping 
+  hosts: 172.31.5.234
   tasks:
-  - name: To dislpay the course i am learning
-    ansible.builtin.debug:
-     msg: "I am learning {{course}}"
+  - name: ping module
+    ansible.builtin.ping:
