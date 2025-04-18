@@ -1,13 +1,18 @@
-- name: ping 
+- name: To install nginx
   hosts: web
+  become: yes
   tasks:
-  - name: ping module
-    ansible.builtin.debug:
-     msg: "Hi, this is from play-1"
+  - name: To install nginx
+    ansible.builtin.package:
+    name: nginx
+    state: present
 
-- name: ping 
+- name: To start nginx
   hosts: web
+  become: yes
   tasks:
-  - name: ping module
-    ansible.builtin.debug:
-     msg: "Hi, this is from play-2"
+  - name: To start nginx
+    ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: yes
