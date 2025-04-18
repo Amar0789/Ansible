@@ -5,10 +5,10 @@
    sg_id: "sg-0e5ba734fc4082212"
    ami_id: "ami-09c813fb71547fc4f"
    zone: "app789.site"
-  instances:
-  - mysql
-  - backend
-  - frontend
+   instances:
+   - mysql
+   - backend
+   - frontend
   tasks:
   - name: To install boto3 and botocore
     ansible.builtin.pip:
