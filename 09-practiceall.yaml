@@ -1,16 +1,13 @@
-- name: conditions
+- name: To register a user if not exists.
   hosts: web
-  vars_prompt:
-  - name: number
-    prompt: please enter a number
-    private: false
   tasks:
-  - name: Conditions
+  - name: To check the user existance
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: true 
+  - name: To print the user info
     ansible.builtin.debug:
-      msg: "The number you have entered is {{number}}, and it is greater than 10"
-    when: number | int > 10
-
-  - name: Conditions
-    ansible.builtin.debug:
-      msg: "The number you have entered is {{number}}, and it is less than 10"
-    when: number | int < 10     
+     msg: "user info is {{USER}}"
+  - name: To add user if not exist
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 
