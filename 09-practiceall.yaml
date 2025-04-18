@@ -4,4 +4,4 @@
   - name: To display ansible facts
     become: yes
     ansible.builtin.debug: 
-     msg: "Hi {{Name | defaul ('Amar')}}"
+     msg: "Hi {{Name | default ('Amar')}}"
