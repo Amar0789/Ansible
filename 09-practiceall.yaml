@@ -1,10 +1,11 @@
 - name: To create ec2 instances and r53 records
-  hosts: web
+  hosts: local
+  connection: local
   vars:
-  - subnet_id: "subnet-0e5b4edb84c2a3ac3"
-  - sg_id: "sg-0e5ba734fc4082212"
-  - ami_id: "ami-09c813fb71547fc4f"
-  - zone: "app789.site"
+   subnet_id: "subnet-0e5b4edb84c2a3ac3"
+   sg_id: "sg-0e5ba734fc4082212"
+   ami_id: "ami-09c813fb71547fc4f"
+   zone: "app789.site"
   instances:
   - mysql
   - backend
