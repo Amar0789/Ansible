@@ -9,10 +9,10 @@
     ansible.builtin.debug:
      msg: "Hi, i am learning {{course}}"
 
-- name: To start nginx
-  hosts: web
-  become: yes
-  tasks:
   - name: To start nginx
-    ansible.builtin.debug:
-     msg: "And its duration is {{duration}}"
+    hosts: web
+    become: yes
+    tasks:
+    - name: To start nginx
+      ansible.builtin.debug:
+      msg: "And its duration is {{duration}}"
