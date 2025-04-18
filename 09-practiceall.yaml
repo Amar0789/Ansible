@@ -12,7 +12,6 @@
   tasks:
   - name: To install boto3 and botocore
     ansible.builtin.pip:
-    - name:
       - boto3
       - botocore
       executable: pip3.9
