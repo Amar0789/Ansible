@@ -1,18 +1,18 @@
 - name: To install nginx
   hosts: web
   become: yes
+  vars:
+   course: "devops"
+   duration: "120 hrs"
   tasks:
   - name: To install nginx
-    ansible.builtin.package:
-     name: nginx
-     state: present
+    ansible.builtin.debug:
+     msg: "Hi, i am learning {{course}}"
 
 - name: To start nginx
   hosts: web
   become: yes
   tasks:
   - name: To start nginx
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
+    ansible.builtin.debug:
+     msg: "And its duration is {{duration}}"
