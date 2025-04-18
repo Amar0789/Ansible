@@ -10,7 +10,6 @@
      msg: "Hi, i am learning {{course}}"
 
   - name: To start nginx
-    hosts: web
     tasks:
     - name: To start nginx
       ansible.builtin.debug:
