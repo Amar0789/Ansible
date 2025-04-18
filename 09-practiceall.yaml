@@ -1,30 +1,30 @@
-# - name: To install nginx
-#   hosts: web
-#   vars:
-#    course: "devops"
-#    duration: "120 hrs"
-#   become: yes
-#   tasks:
-#   - name: To install nginx
-#     ansible.builtin.debug:
-#      msg: "Hi, i am learning {{course}}"
-
-
-#   - name: To start nginx
-#     ansible.builtin.debug:
-#     msg: "And its duration is {{duration}}"
-
-- name: Learning aabout variables
+- name: To install nginx
   hosts: web
   vars:
-   course: "AWS + DEVOPS"
-   duration: "3 months"
-   trainer: "Shivakumar Reddy"
+   course: "devops"
+   duration: "120 hrs"
+  become: yes
   tasks:
-  - name: To print something
+  - name: To install nginx
     ansible.builtin.debug:
-     msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
+     msg: "Hi, i am learning {{course}}"
 
-  - name: To print something
+
+  - name: To start nginx
     ansible.builtin.debug:
-     msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
+     msg: "And its duration is {{duration}}"
+
+# - name: Learning aabout variables
+#   hosts: web
+#   vars:
+#    course: "AWS + DEVOPS"
+#    duration: "3 months"
+#    trainer: "Shivakumar Reddy"
+#   tasks:
+#   - name: To print something
+#     ansible.builtin.debug:
+#      msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
+
+#   - name: To print something
+#     ansible.builtin.debug:
+#      msg: "Hi, i am learning {{course}} the duration is {{duration}} and trainer name is {{trainer}}"
