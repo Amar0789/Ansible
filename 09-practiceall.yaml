@@ -1,14 +1,7 @@
 - name: To register a user if not exists.
   hosts: web
   tasks:
-  - name: To check the user existance
-    ansible.builtin.command: id expense
-    register: USER
-    ignore_errors: true 
-  - name: To print the user info
-    ansible.builtin.debug:
-     msg: "user info is {{USER}}"
-  - name: To add user if not exist
+  - name: To display ansible facts
     become: yes
-    ansible.builtin.command: useradd expense
-    when: USER.rc != 0 
+    ansible.builtin.debug: 
+     msg: {{ansible_facts}}
