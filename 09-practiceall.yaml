@@ -1,9 +1,9 @@
 - name: To install nginx
   hosts: web
-  become: yes
   vars:
    course: "devops"
    duration: "120 hrs"
+  become: yes
   tasks:
   - name: To install nginx
     ansible.builtin.debug:
