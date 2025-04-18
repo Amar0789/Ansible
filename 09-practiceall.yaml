@@ -4,4 +4,9 @@
   - name: To display ansible facts
     become: yes
     ansible.builtin.debug: 
-     msg: "{{ansible_facts}}"
+     msg: "Hi {{item}}, elcome to ansible study sessions"
+    loop:
+    - Amar
+    - Akhil
+    - Abhinav
+    - vishwa
