@@ -3,11 +3,11 @@
   tasks:
   - name: ping module
     ansible.builtin.debug:
-    msg: "Hi, this is from play-1"
+     msg: "Hi, this is from play-1"
 
 - name: ping 
   hosts: web
   tasks:
   - name: ping module
     ansible.builtin.debug:
-    msg: "Hi, this is from play-2"
+     msg: "Hi, this is from play-2"
