@@ -18,16 +18,16 @@
       executable: pip3.9
   - name: To create instances
     amazon.aws.ec2_instace:
-     name: "{{item}}"
+     name: "{{ item }}"
      instance_type: "t3.micro"
-     vpc_subnet_id: "{{subnet_id}}"
-     security_group: "{{sg_id}}"
-     image_id: "{{ami_id}}"
-    loop: "{{instances}}"
+     vpc_subnet_id: "{{ subnet_id }}"
+     security_group: "{{ sg_id }}"
+     image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
     register: ec2_instances
   - name: To print the instances
     ansible.builtin.debug:
-      msg: "{{ec2_instances}}"
+      msg: "{{ ec2_instances }}"
   #private IP R53
   - name: create r53 private records
     amazon.aws.route53:
