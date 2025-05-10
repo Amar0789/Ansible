@@ -3,20 +3,10 @@
   gather_facts: no
   become: yes
   vars:
-    course: devops
-    duration: 120 
-    subjects:
-    - linux
-    - shell scripting
-    - ansible
-    - terraform
-    - docker
-    - kubernetes
-    - jenkins
-    map:
-    - linux: shell
+   number: 11
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
-     msg: "{{course}} {{duration}} {{subjects}} {{map}}"
+     msg: "I am going to be printed on a condition"
+    when: "{{number | int > 10 }}"
 
