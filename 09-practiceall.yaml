@@ -1,16 +1,18 @@
-- name: ping
+- name: Installing nginx
   hosts: web
   gather_facts: no
   tasks:
-  - name: Ping
-    ansible.builtin.debug:
-      msg: "I am from play 1"
+  - name: Installing nginx
+    ansible.builtin.pacakge:
+      name: nginx
+      state: present
 
-- name: msg
+- name: Installing nginx
   hosts: web
   gather_facts: no
-  become: yes
   tasks:
-  - name: Message module
-    ansible.builtin.debug:
-      msg: "I am from play 2"
+  - name: Installing nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
