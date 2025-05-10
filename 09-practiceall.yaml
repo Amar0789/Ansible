@@ -3,7 +3,7 @@
   gather_facts: no
   become: yes
   vars:
-   number: 11
+   number: 1
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
