@@ -1,6 +1,7 @@
 - name: Installing nginx
   hosts: web
   gather_facts: no
+  become: yes
   tasks:
   - name: Installing nginx
     ansible.builtin.package:
@@ -10,6 +11,7 @@
 - name: Installing nginx
   hosts: web
   gather_facts: no
+  become: yes
   tasks:
   - name: Installing nginx
     ansible.builtin.service:
