@@ -7,14 +7,14 @@
     duration: 120 
     subjects:
     - linux
-    -shell scripting
-    -ansible
-    -terraform
-    -docker
-    -kubernetes
-    -jenkins
+    - shell scripting
+    - ansible
+    - terraform
+    - docker
+    - kubernetes
+    - jenkins
     map:
-    -linux: shell
+    - linux: shell
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
