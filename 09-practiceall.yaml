@@ -1,11 +1,13 @@
 - name: ping
   hosts: web
+  gathering_facts: no
   tasks:
   - name: Ping
     ansible.builtin.debug:
       msg: "I am from play 1"
 - name: msg
-  hosts: eb
+  hosts: web
+  gathering_facts: no
   become: yes
   tasks:
   - name: Message module
