@@ -1,6 +1,5 @@
 - name: Installing nginx
   hosts: web
-  gather_facts: no
   become: yes
   vars:
    number: 11
