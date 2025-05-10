@@ -3,6 +3,13 @@
   connection: local
   become: yes
   tasks:
+  - name: Ansible to install boto3 and botcore
+    ansible.builtin.pip:
+     name:
+     - boto3
+     - botocore
+     executable: pip-3.9
+     
   - name: Installing nginx
     amazon.aws.ec2_instance:
       name: "new"
