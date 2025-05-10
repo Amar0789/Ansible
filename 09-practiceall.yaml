@@ -5,6 +5,7 @@
   - name: Ping
     ansible.builtin.debug:
       msg: "I am from play 1"
+      
 - name: msg
   hosts: web
   gathering_facts: no
