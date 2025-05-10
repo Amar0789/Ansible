@@ -8,5 +8,5 @@
   - name: Installing nginx
     ansible.builtin.debug:
      msg: "I am going to be printed on a condition"
-    when: "{{number | int > 10 }}"
+    when: number | int > 10 
 
