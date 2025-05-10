@@ -2,4 +2,12 @@
   hosts: web
   tasks:
   - name: Ping
-    ansible.builtin.ping:
+    ansible.builtin.debug:
+      msg: "I am from play 1"
+- name: msg
+  hosts: eb
+  become: yes
+  tasks:
+  - name: Message module
+    ansible.builtin.debug:
+      msg: "I am from play 2"
