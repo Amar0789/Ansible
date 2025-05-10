@@ -4,7 +4,7 @@
   become: yes
   tasks:
   - name: Installing nginx
-    ansible.aws.ec2_instance:
+    amazon.aws.ec2_instance:
       name: "{{ new }}"
       security_group: "sg-00a68c2cca8087c79"
       vpc_subnet_id: "vpc-00f663d142641e83c"
