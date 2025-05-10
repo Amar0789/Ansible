@@ -3,7 +3,7 @@
   gather_facts: no
   become: yes
   vars_files:
-  - var.yaml
+  - vars.yaml
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
