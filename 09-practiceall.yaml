@@ -9,7 +9,7 @@
      - boto3
      - botocore
      executable: pip-3.9
-     
+
   - name: Installing nginx
     amazon.aws.ec2_instance:
       name: "new"
@@ -17,3 +17,4 @@
       vpc_subnet_id: "vpc-00f663d142641e83c"
       image_id: "ami-09c813fb71547fc4f"
       instance_type: "t3.micro"
+      region: "us-east-1"
