@@ -2,8 +2,8 @@
   hosts: web
   gather_facts: no
   become: yes
-  vars:
-   course: "Devops"
+  vars_files:
+  - var.yaml
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
