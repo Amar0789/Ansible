@@ -2,8 +2,10 @@
   hosts: web
   gather_facts: no
   become: yes
-  vars_files:
-  - vars.yaml
+  vars_prompt:
+  - name: course
+    prompt: Tell me the course name you are learning
+    private: false
   tasks:
   - name: Installing nginx
     ansible.builtin.debug:
